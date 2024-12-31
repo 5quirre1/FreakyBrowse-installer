@@ -36,7 +36,7 @@ int main() {
 // All the stuff yk
 void versions_menu() {
     std::string choice;
-    std::cout << "These are all of the versions that you can install!!!\n";
+    std::cout << "These are all of the versions that you can install!!! You can also use this to update!\n";
     std::cout << "2.2 (STYLES DON'T SAVE)\n";
     std::cout << "2.1\n";
     std::cout << "2\n";
@@ -328,7 +328,7 @@ void versions_menu() {
     // ********************************************************************
     else if (choice == "1.1") {
         std::string sure;
-        std::cout << "Are you sure you want to install this? (y/n)";
+        std::cout << "Are you sure you want to install this? (y/n)\n";
         std::cin >> sure;
 
         if (sure == "y" || sure == "Y") {
@@ -350,10 +350,10 @@ void versions_menu() {
             versions_menu();
         }
     }
-    // ********************************************************************
+    // *******************************************************************************
     else if (choice == "1.0") {
         std::string sure;
-        std::cout << "Are you sure you want to install this? (y/n)";
+        std::cout << "Are you sure you want to install this? (y/n)\n";
         std::cin >> sure;
 
         if (sure == "y" || sure == "Y") {
@@ -380,12 +380,20 @@ void versions_menu() {
 
 
 
+
+
+
+
+
+
+
+
 void help() {
     std::cout << "--------------------------------------------------------\n";
     std::cout << "ALL COMMANDS!!!\n";
 
     std::cout << "versions - shows all the versions to install!\n";
-    std::cout << "Update - Update FreakyBrowse to it's newest version!\n";
+    std::cout << "Update - this command doesn't exist lmfao, just use the install command :333\n";
     std::cout << "--------------------------------------------------------\n";
     main();
 }
