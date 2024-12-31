@@ -27,6 +27,9 @@ int main() {
     else if (choices == "uninstall" || choices == "Uninstall" || choices == "delete" || choices == "Delete") {
         uninstall();
     }
+    else if (choices == "exit" || choices == "Exit") {
+        exit(69);
+    }
     else {
         std::cout << "that command doesn't exist! Try doing \'versions\'!\n";
         std::cout << "-----------------------------------------------------------------------";
@@ -563,6 +566,7 @@ void help() {
 
     std::cout << "versions - shows all the versions to install and update!\n";
     std::cout << "uninstall - Deletes a version that you want to have deleted!\n";
+    std::cout << "Exit - Exits the program\n";
     std::cout << "--------------------------------------------------------\n";
     main();
 }
