@@ -350,6 +350,7 @@ void versions_menu() {
             versions_menu();
         }
     }
+    // ********************************************************************
     else if (choice == "1.0") {
         std::string sure;
         std::cout << "Are you sure you want to install this? (y/n)";
