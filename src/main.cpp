@@ -3,11 +3,11 @@
 #include <cstdlib>
 #include <windows.h>
 #include <fstream>
-#include <conio.h>
 #include <shellapi.h>
 #pragma comment(lib, "urlmon.lib")
 
 void versions_menu();
+void uninstall();
 void help();
 
 
@@ -23,6 +23,9 @@ int main() {
     }
     else if (choices == "help" || choices == "Help") {
         help();
+    }
+    else if (choices == "uninstall" || choices == "Uninstall" || choices == "delete" || choices == "Delete") {
+        uninstall();
     }
     else {
         std::cout << "that command doesn't exist! Try doing \'versions\'!\n";
@@ -378,7 +381,173 @@ void versions_menu() {
     versions_menu();
 }
 
+void uninstall() {
+    std::string choice;
+    std::cout << "-----------------------------------------------------\n";
+    std::cout << "Here you'll be able to uninstall any version of FreakyBrowse that you have!\n";
+    std::cout << "Here's all the versions!\n\n";
+    std::cout << "2.2 (STYLES DON'T SAVE)\n";
+    std::cout << "2.1\n";
+    std::cout << "2\n";
+    std::cout << "1.9\n";
+    std::cout << "1.8\n";
+    std::cout << "1.7\n";
+    std::cout << "1.6\n";
+    std::cout << "1.5\n";
+    std::cout << "1.4\n";
+    std::cout << "1.3\n";
+    std::cout << "1.2\n";
+    std::cout << "1.1\n";
+    std::cout << "1.0\n\n";
+    std::cin >> choice;
 
+    if (choice == "2.2") {
+        int status = remove("FreakyBrowse.2.2.zip");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "2.1") {
+        int status = remove("FreakyBrowse.2.1.zip");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "2") {
+        int status = remove("FreakyBrowse2.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.9") {
+        int status = remove("FreakyBrowse.1.9.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.8") {
+        int status = remove("FreakyBrowse.1.8.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.7") {
+        int status = remove("FreakyBrowse.1.7.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.6") {
+        int status = remove("FreakyBrowse.1.6.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.5") {
+        int status = remove("FreakyBrowse.1.5.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.4") {
+        int status = remove("FreakyBrowse.1.4.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.3") {
+        int status = remove("FreakyBrowse.1.3.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.2") {
+        int status = remove("FreakyBrowse.1.2.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.1") {
+        int status = remove("FreakyBrowse.1.2.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    // *********************************************************
+    else if (choice == "1.0") {
+        int status = remove("FreakyBrowse.exe");
+
+        if (status == 0) {
+            std::cout << "It has been deleted!\n";
+        }
+        else {
+            std::cout << "error, no deletion 2025 real\n";
+        }
+    }
+    else {
+        std::cout << "that version doesn't exist vro\n";
+    }
+uninstall();
+}
 
 
 
@@ -392,8 +561,8 @@ void help() {
     std::cout << "--------------------------------------------------------\n";
     std::cout << "ALL COMMANDS!!!\n";
 
-    std::cout << "versions - shows all the versions to install!\n";
-    std::cout << "Update - this command doesn't exist lmfao, just use the install command :333\n";
+    std::cout << "versions - shows all the versions to install and update!\n";
+    std::cout << "uninstall - Deletes a version that you want to have deleted!\n";
     std::cout << "--------------------------------------------------------\n";
     main();
 }
